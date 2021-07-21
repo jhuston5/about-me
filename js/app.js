@@ -59,18 +59,21 @@ function homeStateQuestion(){
 }
 homeStateQuestion();
 // Ask if Josh has worked in the corporate sector
-let corporateJob = prompt('Has Josh worked in the corporate sector?').toLowerCase();
-console.log('User answer: ' + corporateJob);
+  function corporateQuestion(){
+  let corporateJob = prompt('Has Josh worked in the corporate sector?').toLowerCase();
+  console.log('User answer: ' + corporateJob);
 
-if (corporateJob === 'yes' || corporateJob === 'y') {
-  alert('That\'s right! Josh works for Zillow!');
-  userScore++;
-} else if (corporateJob === 'no' || corporateJob === 'n') {
-  //  //console.log('Actually, that is incorrect!');
-  alert('Actually, Josh does work for a civilian employer, the real estate company, Zillow!');
-} else {
-  alert('Sorry, answers need to be yes or no.');
+  if (corporateJob === 'yes' || corporateJob === 'y') {
+    alert('That\'s right! Josh works for Zillow!');
+    userScore++;
+  } else if (corporateJob === 'no' || corporateJob === 'n') {
+    //  //console.log('Actually, that is incorrect!');
+    alert('Actually, Josh does work for a civilian employer, the real estate company, Zillow!');
+  } else {
+    alert('Sorry, answers need to be yes or no.');
+  }
 }
+corporateQuestion();
 
 // Ask if Josh has worked in the military
 let militaryExperience = prompt('Has Josh ever served in the military?').toLowerCase();
