@@ -98,27 +98,30 @@ militaryQuestion();
 // After all attempts have been exhausted, tell the user the correct answer. Consider using a loop of some sort.
 
 //Add 6th question
+function yearsMarriedQuestion(){
 let attempts = 4;
 for (let i = 0; i < 4; i++) {
-  let userMarriedGuess = prompt('How many years has Josh been married to Taylor?');
-  let userMarriedInt = parseInt(userMarriedGuess);
-  let yearsMarriedAnswer = 4;
-  if (userMarriedInt < yearsMarriedAnswer) {
-    alert('Too low!');
-  } else if (userMarriedInt > yearsMarriedAnswer) {
-    alert('Too high');
+    let userMarriedGuess = prompt('How many years has Josh been married to Taylor?');
+    let userMarriedInt = parseInt(userMarriedGuess);
+    let yearsMarriedAnswer = 4;
+    if (userMarriedInt < yearsMarriedAnswer) {
+      alert('Too low!');
+    } else if (userMarriedInt > yearsMarriedAnswer) {
+      alert('Too high');
+    }
+    else if (userMarriedInt === yearsMarriedAnswer) {
+      alert('You are correct!');
+      userScore++;
+      break;
+    }
+    else if (i === 4) {
+      alert(`Sorry! Josh and Taylor have been married for ${yearsMarriedAnswer} years`);
+    }
+    attempts--;
+    alert(`That guess was not correct. You have ${attempts} attempts remaining`);
   }
-  else if (userMarriedInt === yearsMarriedAnswer) {
-    alert('You are correct!');
-    userScore++;
-    break;
-  }
-  else if (i === 4) {
-    alert(`Sorry! Josh and Taylor have been married for ${yearsMarriedAnswer} years`);
-  }
-  attempts--;
-  alert(`That guess was not correct. You have ${attempts} attempts remaining`);
 }
+yearsMarriedQuestion();
 
 
 
