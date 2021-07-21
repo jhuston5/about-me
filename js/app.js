@@ -43,19 +43,21 @@ function childrenQuestion(){
 childrenQuestion();
 
 // Ask if Utah is Josh's home state
-let homeState = prompt('Is Josh from Utah?').toLowerCase();
-console.log('User answer: ' + haveChildren);
+function homeStateQuestion(){
+  let homeState = prompt('Is Josh from Utah?').toLowerCase();
+  console.log('User answer: ' + haveChildren);
 
-if (homeState === 'yes' || homeState === 'y') {
-  //console.log('Actually, that is incorrect!');
-  alert('Actually, Josh is from Arizona!');
-} else if (homeState === 'no' || homeState === 'n') {
-  alert('That is correct! Josh is originally from Arizona.');
-  userScore++;
-} else {
-  alert('Sorry, answers need to be yes or no.');
+  if (homeState === 'yes' || homeState === 'y') {
+    //console.log('Actually, that is incorrect!');
+    alert('Actually, Josh is from Arizona!');
+  } else if (homeState === 'no' || homeState === 'n') {
+    alert('That is correct! Josh is originally from Arizona.');
+    userScore++;
+  } else {
+    alert('Sorry, answers need to be yes or no.');
+  }
 }
-
+homeStateQuestion();
 // Ask if Josh has worked in the corporate sector
 let corporateJob = prompt('Has Josh worked in the corporate sector?').toLowerCase();
 console.log('User answer: ' + corporateJob);
