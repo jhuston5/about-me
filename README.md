@@ -5,7 +5,7 @@
 ## About Me
 
 ### Author: Joshua Huston
-driver : osborn
+driver : Osborn
 navigator: Josh
 
 

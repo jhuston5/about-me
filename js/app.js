@@ -45,7 +45,7 @@ childrenQuestion();
 // Ask if Utah is Josh's home state
 function homeStateQuestion(){
   let homeState = prompt('Is Josh from Utah?').toLowerCase();
-  console.log('User answer: ' + haveChildren);
+  console.log('User answer: ' + homeState);
 
   if (homeState === 'yes' || homeState === 'y') {
     //console.log('Actually, that is incorrect!');
@@ -59,7 +59,7 @@ function homeStateQuestion(){
 }
 homeStateQuestion();
 // Ask if Josh has worked in the corporate sector
-  function corporateQuestion(){
+function corporateQuestion(){
   let corporateJob = prompt('Has Josh worked in the corporate sector?').toLowerCase();
   console.log('User answer: ' + corporateJob);
 
@@ -99,8 +99,8 @@ militaryQuestion();
 
 //Add 6th question
 function yearsMarriedQuestion(){
-let attempts = 4;
-for (let i = 0; i < 4; i++) {
+  let attempts = 4;
+  for (let i = 0; i < 4; i++) {
     let userMarriedGuess = prompt('How many years has Josh been married to Taylor?');
     let userMarriedInt = parseInt(userMarriedGuess);
     let yearsMarriedAnswer = 4;
@@ -127,7 +127,7 @@ yearsMarriedQuestion();
 
 // Ask what Josh's favorite color is and alert to the number of attempts remaining
 // Provide multiple correct answers and then display those answers
-  function favoriteColorsQuestion(){
+function favoriteColorsQuestion(){
   let myFavColors = ['desert tan', 'black', 'gold'];
   let attemptsRemaining = 6;
   let guessedCorrectly = false;
