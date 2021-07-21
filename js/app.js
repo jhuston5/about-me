@@ -127,25 +127,28 @@ yearsMarriedQuestion();
 
 // Ask what Josh's favorite color is and alert to the number of attempts remaining
 // Provide multiple correct answers and then display those answers
-let myFavColors = ['desert tan', 'black', 'gold'];
-let attemptsRemaining = 6;
-let guessedCorrectly = false;
-while (attemptsRemaining && !guessedCorrectly){
-  let userResponse = prompt('What is Josh\'s favorite color?');
-  for (let i = 0; i < myFavColors.length; i++) {
-    if (userResponse === myFavColors[i]) {
-      alert('You are correct!');
-      guessedCorrectly = true;
-      userScore++;
+  function favoriteColorsQuestion(){
+  let myFavColors = ['desert tan', 'black', 'gold'];
+  let attemptsRemaining = 6;
+  let guessedCorrectly = false;
+  while (attemptsRemaining && !guessedCorrectly){
+    let userResponse = prompt('What is Josh\'s favorite color?');
+    for (let i = 0; i < myFavColors.length; i++) {
+      if (userResponse === myFavColors[i]) {
+        alert('You are correct!');
+        guessedCorrectly = true;
+        userScore++;
+      }
     }
+    attemptsRemaining--;
+    if(guessedCorrectly === true) {
+      alert(`The following are my 3 favorite colors: ${myFavColors}`);
+      break;
+    }
+    alert(`That guess was not correct. You have ${attemptsRemaining} attempts remaining`);
   }
-  attemptsRemaining--;
-  if(guessedCorrectly === true) {
-    alert(`The following are my 3 favorite colors: ${myFavColors}`);
-    break;
-  }
-  alert(`That guess was not correct. You have ${attemptsRemaining} attempts remaining`);
 }
+favoriteColorsQuestion();
 
 //Aggregate the number of correct questions and display how many were right
 alert(`You answered ${userScore} questions correct out of 7.`);
