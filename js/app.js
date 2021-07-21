@@ -76,18 +76,21 @@ homeStateQuestion();
 corporateQuestion();
 
 // Ask if Josh has worked in the military
-let militaryExperience = prompt('Has Josh ever served in the military?').toLowerCase();
-console.log('User answer: ' + militaryExperience);
+function militaryQuestion(){
+  let militaryExperience = prompt('Has Josh ever served in the military?').toLowerCase();
+  console.log('User answer: ' + militaryExperience);
 
-if(militaryExperience === 'yes' || militaryExperience === 'y') {
-  alert('Yes! Josh also works for part-time for the National Guard.');
-  userScore++;
-} else if (militaryExperience === 'no' || militaryExperience === 'n') {
-  //  //console.log('Actually, that is incorrect!');
-  alert('Josh has actually been a part of both the Arizona and South Carolina Army National Guard.');
-} else {
-  alert('Sorry, answers need to be yes or no.');
+  if(militaryExperience === 'yes' || militaryExperience === 'y') {
+    alert('Yes! Josh also works for part-time for the National Guard.');
+    userScore++;
+  } else if (militaryExperience === 'no' || militaryExperience === 'n') {
+    //  //console.log('Actually, that is incorrect!');
+    alert('Josh has actually been a part of both the Arizona and South Carolina Army National Guard.');
+  } else {
+    alert('Sorry, answers need to be yes or no.');
+  }
 }
+militaryQuestion();
 
 // //Add a 6th question to the guessing game that takes in a numeric input by prompting the user to guess a number.
 // Indicates through an alert if the guess is “too high” or “too low”.
