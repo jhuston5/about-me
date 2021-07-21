@@ -8,18 +8,21 @@ alert('Hello ' + username + '! Here are some questions about me!');
 let userScore = 0;
 
 // Ask if Josh went to college
-let collegeAttendance = prompt('Did Josh attend college? Answer yes or no.').toLowerCase();
-console.log('User answer: ' + collegeAttendance);
+function collegeQuestion(){
+  let collegeAttendance = prompt('Did Josh attend college? Answer yes or no.').toLowerCase();
+  console.log('User answer: ' + collegeAttendance);
 
-if (collegeAttendance === 'yes' || collegeAttendance === 'y' ) {
-  // console.log('Correct! Josh attended college at Brigham Young University.');
-  alert('Correct! Josh attended college at Brigham Young University.');
-  userScore++;
-} else if (collegeAttendance === 'no' || collegeAttendance === 'n') {
-  alert('Sorry, you are incorrect. Josh was a history major at BYU!');
-} else {
-  alert('Sorry, answers need to be yes or no.');
+  if (collegeAttendance === 'yes' || collegeAttendance === 'y' ) {
+    // console.log('Correct! Josh attended college at Brigham Young University.');
+    alert('Correct! Josh attended college at Brigham Young University.');
+    userScore++;
+  } else if (collegeAttendance === 'no' || collegeAttendance === 'n') {
+    alert('Sorry, you are incorrect. Josh was a history major at BYU!');
+  } else {
+    alert('Sorry, answers need to be yes or no.');
+  }
 }
+collegeQuestion();
 
 //Ask if Josh has children
 let haveChildren = prompt('Does Josh have any children? Answer yes or no.').toLowerCase();
