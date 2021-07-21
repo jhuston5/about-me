@@ -25,19 +25,22 @@ function collegeQuestion(){
 collegeQuestion();
 
 //Ask if Josh has children
-let haveChildren = prompt('Does Josh have any children? Answer yes or no.').toLowerCase();
-console.log('User answer: ' + haveChildren);
+function childrenQuestion(){
+  let haveChildren = prompt('Does Josh have any children? Answer yes or no.').toLowerCase();
+  console.log('User answer: ' + haveChildren);
 
-if (haveChildren === 'yes' || haveChildren === 'y') {
-  // console.log('Correct! Josh and his wife are expecting their first child in February');
-  alert('Correct! Josh and his wife are expecting their first child in February');
-  userScore++;
-} else if (haveChildren === 'no' || haveChildren === 'n') {
-  alert('Not quite! They are pregnant with their first child due in February.');
+  if (haveChildren === 'yes' || haveChildren === 'y') {
+    // console.log('Correct! Josh and his wife are expecting their first child in February');
+    alert('Correct! Josh and his wife are expecting their first child in February');
+    userScore++;
+  } else if (haveChildren === 'no' || haveChildren === 'n') {
+    alert('Not quite! They are pregnant with their first child due in February.');
+  }
+  else {
+    alert('Sorry, answers need to be yes or no.');
+  }
 }
-else {
-  alert('Sorry, answers need to be yes or no.');
-}
+childrenQuestion();
 
 // Ask if Utah is Josh's home state
 let homeState = prompt('Is Josh from Utah?').toLowerCase();
