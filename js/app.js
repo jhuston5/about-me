@@ -7,95 +7,54 @@ alert('Hello ' + username + '! Here are some questions about me!');
 
 let userScore = 0;
 
-// Ask if Josh went to college
-function collegeQuestion(){
-  let collegeAttendance = prompt('Did Josh attend college? Answer yes or no.').toLowerCase();
-  console.log('User answer: ' + collegeAttendance);
+// Use arrays for stretch goal
+// Store questions and responses in containers
+let questionOne =
+['Did Josh attend college? Answer yes or no.',
+  'Correct! Josh attended college at Brigham Young University.',
+  'Sorry, you are incorrect. Josh was a history major at BYU!'];
 
-  if (collegeAttendance === 'yes' || collegeAttendance === 'y' ) {
-    // console.log('Correct! Josh attended college at Brigham Young University.');
-    alert('Correct! Josh attended college at Brigham Young University.');
+let questionTwo =
+['Does Josh have any children? Answer yes or no.',
+  'Correct! Josh and his wife are expecting their first child in February',
+  'Not quite! They are pregnant with their first child due in February.'];
+
+let questionThree =
+['Is Josh from Utah?',
+  'Actually, Josh is from Arizona!',
+  'That is correct! Josh is originally from Arizona.'
+];
+
+let questionFour =
+['Has Josh worked in the corporate sector?',
+  'That\'s right! Josh works for Zillow!',
+  'Actually, Josh does work for a civilian employer, the real estate company, Zillow!'
+];
+
+let questionFive =
+['Has Josh ever served in the military?',
+  'Yes! Josh also works for part-time for the National Guard.',
+  'Josh has actually been a part of both the Arizona and South Carolina Army National Guard.'
+];
+
+// final array of arrays
+let joshQuestions = [questionOne, questionTwo, questionThree, questionFour, questionFive];
+
+// iterate through the user prompts
+for (let i = 0; i < joshQuestions.length; i++) {
+  let joshAnswer = prompt(joshQuestions[i][0]).toLowerCase();
+  console.log(joshAnswer);
+  if (joshAnswer === 'yes' || joshAnswer === 'y') {
+    alert(joshQuestions[i][1]);
     userScore++;
-  } else if (collegeAttendance === 'no' || collegeAttendance === 'n') {
-    alert('Sorry, you are incorrect. Josh was a history major at BYU!');
-  } else {
-    alert('Sorry, answers need to be yes or no.');
-  }
-}
-collegeQuestion();
-
-//Ask if Josh has children
-function childrenQuestion(){
-  let haveChildren = prompt('Does Josh have any children? Answer yes or no.').toLowerCase();
-  console.log('User answer: ' + haveChildren);
-
-  if (haveChildren === 'yes' || haveChildren === 'y') {
-    // console.log('Correct! Josh and his wife are expecting their first child in February');
-    alert('Correct! Josh and his wife are expecting their first child in February');
-    userScore++;
-  } else if (haveChildren === 'no' || haveChildren === 'n') {
-    alert('Not quite! They are pregnant with their first child due in February.');
+  } else if (joshAnswer === 'no' || joshAnswer === 'n') {
+    alert(joshQuestions[i][2]);
   }
   else {
     alert('Sorry, answers need to be yes or no.');
   }
 }
-childrenQuestion();
 
-// Ask if Utah is Josh's home state
-function homeStateQuestion(){
-  let homeState = prompt('Is Josh from Utah?').toLowerCase();
-  console.log('User answer: ' + homeState);
-
-  if (homeState === 'yes' || homeState === 'y') {
-    //console.log('Actually, that is incorrect!');
-    alert('Actually, Josh is from Arizona!');
-  } else if (homeState === 'no' || homeState === 'n') {
-    alert('That is correct! Josh is originally from Arizona.');
-    userScore++;
-  } else {
-    alert('Sorry, answers need to be yes or no.');
-  }
-}
-homeStateQuestion();
-// Ask if Josh has worked in the corporate sector
-function corporateQuestion(){
-  let corporateJob = prompt('Has Josh worked in the corporate sector?').toLowerCase();
-  console.log('User answer: ' + corporateJob);
-
-  if (corporateJob === 'yes' || corporateJob === 'y') {
-    alert('That\'s right! Josh works for Zillow!');
-    userScore++;
-  } else if (corporateJob === 'no' || corporateJob === 'n') {
-    //  //console.log('Actually, that is incorrect!');
-    alert('Actually, Josh does work for a civilian employer, the real estate company, Zillow!');
-  } else {
-    alert('Sorry, answers need to be yes or no.');
-  }
-}
-corporateQuestion();
-
-// Ask if Josh has worked in the military
-function militaryQuestion(){
-  let militaryExperience = prompt('Has Josh ever served in the military?').toLowerCase();
-  console.log('User answer: ' + militaryExperience);
-
-  if(militaryExperience === 'yes' || militaryExperience === 'y') {
-    alert('Yes! Josh also works for part-time for the National Guard.');
-    userScore++;
-  } else if (militaryExperience === 'no' || militaryExperience === 'n') {
-    //  //console.log('Actually, that is incorrect!');
-    alert('Josh has actually been a part of both the Arizona and South Carolina Army National Guard.');
-  } else {
-    alert('Sorry, answers need to be yes or no.');
-  }
-}
-militaryQuestion();
-
-// //Add a 6th question to the guessing game that takes in a numeric input by prompting the user to guess a number.
-// Indicates through an alert if the guess is “too high” or “too low”.
-// It should give the user exactly four opportunities to get the correct answer.
-// After all attempts have been exhausted, tell the user the correct answer. Consider using a loop of some sort.
 
 //Add 6th question
 function yearsMarriedQuestion(){
@@ -126,7 +85,7 @@ yearsMarriedQuestion();
 
 
 // Ask what Josh's favorite color is and alert to the number of attempts remaining
-// Provide multiple correct answers and then display those answers
+
 function favoriteColorsQuestion(){
   let myFavColors = ['desert tan', 'black', 'gold'];
   let attemptsRemaining = 6;

@@ -1,13 +1,13 @@
 * {
-  background-color: tan;
+  background-color: #8EE3EF;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 h1 {
   font-size: 3rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-color: black;
-  color: tan;
+  background-color: #254E70;
+  color: #F9DB6D;
   height: 4rem;
   padding: 1rem;
 }
@@ -22,6 +22,7 @@ h2 {
   border-radius: 5px;
   display: inline-block;
   padding: 0.5rem;
+  color: #254E70;
 }
 
 ul, ol {
@@ -31,12 +32,13 @@ ul, ol {
   margin-top: .25rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 1.5rem;
+  color: #254E70;
 }
 
 footer {
-  background-color: black;
+  background-color: #254E70;
   height: 3rem;
-  color: tan;
+  color: #F9DB6D;
   padding: 1rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 1rem;
